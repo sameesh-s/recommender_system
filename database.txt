@@ -1,0 +1,9 @@
+CREATE TABLE user
+	( user_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+ 	email VARCHAR(75) NOT NULL,
+ 	pwd VARCHAR(25) NOT NULL,
+    age INT(2), pin INT(6), gender VARCHAR(1),
+    PRIMARY KEY(user_id),
+    UNIQUE KEY(email) )
+
+DESCRIBE user
