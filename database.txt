@@ -1,3 +1,5 @@
+1.user
+------
 CREATE TABLE user
 	( user_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
  	email VARCHAR(75) NOT NULL,
@@ -5,5 +7,184 @@ CREATE TABLE user
     age INT(2), pin INT(6), gender VARCHAR(1),
     PRIMARY KEY(user_id),
     UNIQUE KEY(email) )
++---------+-----------------+------+-----+---------+----------------+
+| Field   | Type            | Null | Key | Default | Extra          |
++---------+-----------------+------+-----+---------+----------------+
+| user_id | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| email   | varchar(75)     | NO   | UNI | NULL    |                |
+| pwd     | varchar(25)     | NO   |     | NULL    |                |
+| age     | int(2)          | YES  |     | NULL    |                |
+| pin     | int(6)          | YES  |     | NULL    |                |
+| gender  | varchar(1)      | YES  |     | NULL    |                |
++---------+-----------------+------+-----+---------+----------------+
 
-DESCRIBE user
+
+2.Category
+--------
+
+CREATE TABLE category
+	( category_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+ 	category_name VARCHAR(25) NOT NULL,
+    PRIMARY KEY(category_id),
+    UNIQUE KEY(category_name) )
++---------------+-----------------+------+-----+---------+----------------+
+| Field         | Type            | Null | Key | Default | Extra          |
++---------------+-----------------+------+-----+---------+----------------+
+| category_id   | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| category_name | varchar(25)     | YES  | UNI | NULL    |                |
++---------------+-----------------+------+-----+---------+----------------+
+
+
+3.product
+--------
+CREATE TABLE product
+	(product_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+	category_id int(6) UNSIGNED NOT NULL,
+	name VARCHAR(45) NOT NULL,
+	image VARCHAR(150) NOT NULL,
+	price  numeric(15,2) NOT NULL,
+    PRIMARY KEY(product_id),
+    CONSTRAINT category_id FOREIGN KEY (category_id) REFERENCES category(category_id),
+    UNIQUE KEY(name) )
++-------------+-----------------+------+-----+---------+----------------+
+| Field       | Type            | Null | Key | Default | Extra          |
++-------------+-----------------+------+-----+---------+----------------+
+| product_id  | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| category_id | int(6) unsigned | NO   | MUL | NULL    |                |
+| name        | varchar(45)     | NO   | UNI | NULL    |                |
+| image       | varchar(150)    | NO   |     | NULL    |                |
+| price       | decimal(15,2)   | NO   |     | NULL    |                |
++-------------+-----------------+------+-----+---------+----------------+
+
+4.product_spec_types
+------------------
+CREATE TABLE spec_type_names
+	( spec_id int(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+ 	spec_name VARCHAR(25) NOT NULL,
+    PRIMARY KEY(spec_id),
+    UNIQUE KEY(spec_name) )
++-----------+-----------------+------+-----+---------+----------------+
+| Field     | Type            | Null | Key | Default | Extra          |
++-----------+-----------------+------+-----+---------+----------------+
+| spec_id   | int(3) unsigned | NO   | PRI | NULL    | auto_increment |
+| spec_name | varchar(25)     | NO   | UNI | NULL    |                |
++-----------+-----------------+------+-----+---------+----------------+
+
+
+ID  |  name
+------------------
+1   | refresh rate
+2   | size (diagonal)
+3   | shoe size
+4   | colour
+
+5.product_spec_values
+-------------------
+CREATE TABLE product_spec_values
+	(product_id int(6) UNSIGNED NOT NULL,
+	spec_id int(3) UNSIGNED NOT NULL,
+	spec_value VARCHAR(100),
+	CONSTRAINT product_id FOREIGN KEY (product_id) REFERENCES product(product_id),
+    CONSTRAINT spec_id FOREIGN KEY (spec_id) REFERENCES spec_type_names(spec_id),
+    PRIMARY KEY(product_id,spec_id) )
++------------+-----------------+------+-----+---------+-------+
+| Field      | Type            | Null | Key | Default | Extra |
++------------+-----------------+------+-----+---------+-------+
+| product_id | int(6) unsigned | NO   | PRI | NULL    |       |
+| spec_id    | int(3) unsigned | NO   | PRI | NULL    |       |
+| spec_value | varchar(100)    | YES  |     | NULL    |       |
++------------+-----------------+------+-----+---------+-------+
+
+
+ID  | Product_ID   | Spec_ID  | Value
+-------------------------------------
+1   | 1            | 1        | 60 HZ
+2   | 1            | 2        | 32 inches
+3   | 2            | 3        | 4
+4   | 2            | 4        | blue w/grey
+
+6.purchased
+---------
+CREATE TABLE purchased
+	(order_id int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+	user_id int(6) UNSIGNED NOT NULL,
+	order_date DATETIME,
+    CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES user(user_id),
+    PRIMARY KEY(order_id) )
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| order_id   | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| user_id    | int(6) unsigned | NO   | MUL | NULL    |                |
+| order_date | datetime        | YES  |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+
+7.order_line
+------------
+CREATE TABLE order_line
+	(order_line_id int(6) UNSIGNED NOT NULL,
+	product_line_id int(6) UNSIGNED NOT NULL,
+	quantity int(3) UNSIGNED ,
+	total numeric(12,2),
+	CONSTRAINT order_line_id FOREIGN KEY (order_line_id) REFERENCES purchased(order_id),
+	CONSTRAINT product_line_id FOREIGN KEY (product_line_id) REFERENCES product(product_id),
+	PRIMARY KEY(order_line_id,product_line_id) )
++-----------------+-----------------+------+-----+---------+-------+
+| Field           | Type            | Null | Key | Default | Extra |
++-----------------+-----------------+------+-----+---------+-------+
+| order_line_id   | int(6) unsigned | NO   | PRI | NULL    |       |
+| product_line_id | int(6) unsigned | NO   | PRI | NULL    |       |
+| quantity        | int(3) unsigned | YES  |     | NULL    |       |
+| total           | decimal(12,2)   | YES  |     | NULL    |       |
++-----------------+-----------------+------+-----+---------+-------+
+
+8.cart_line
+-----------
+CREATE TABLE cart_line
+	(user_id_cart int(6) UNSIGNED NOT NULL,
+	product_id_cart int(6) UNSIGNED NOT NULL,
+	quantity INT(3) UNSIGNED NOT NULL,
+	CONSTRAINT product_id_cart FOREIGN KEY (product_id_cart) REFERENCES product(product_id),
+    CONSTRAINT user_id_cart FOREIGN KEY (user_id_cart) REFERENCES user(user_id),
+    PRIMARY KEY(product_id_cart,user_id_cart) )
++-----------------+-----------------+------+-----+---------+-------+
+| Field           | Type            | Null | Key | Default | Extra |
++-----------------+-----------------+------+-----+---------+-------+
+| user_id_cart    | int(6) unsigned | NO   | PRI | NULL    |       |
+| product_id_cart | int(6) unsigned | NO   | PRI | NULL    |       |
+| quantity        | int(3) unsigned | NO   |     | NULL    |       |
++-----------------+-----------------+------+-----+---------+-------+
+
+9.wishlist
+----------
+CREATE TABLE wishlist
+	(user_id_wish int(6) UNSIGNED NOT NULL,
+	product_id_wish int(6) UNSIGNED NOT NULL,
+	CONSTRAINT product_id_wish FOREIGN KEY (product_id_wish) REFERENCES product(product_id),
+    CONSTRAINT user_id_wish FOREIGN KEY (user_id_wish) REFERENCES user(user_id),
+    PRIMARY KEY(product_id_wish,user_id_wish) )
++-----------------+-----------------+------+-----+---------+-------+
+| Field           | Type            | Null | Key | Default | Extra |
++-----------------+-----------------+------+-----+---------+-------+
+| user_id_wish    | int(6) unsigned | NO   | PRI | NULL    |       |
+| product_id_wish | int(6) unsigned | NO   | PRI | NULL    |       |
++-----------------+-----------------+------+-----+---------+-------+
+
+10.viewline
+------------
+CREATE TABLE viewline
+	(user_id_view int(6) UNSIGNED NOT NULL,
+	product_id_view int(6) UNSIGNED NOT NULL,
+	time_diff int(16) UNSIGNED NOT NULL,
+	last_access DATETIME,
+	CONSTRAINT product_id_view FOREIGN KEY (product_id_view) REFERENCES product(product_id),
+    CONSTRAINT user_id_view FOREIGN KEY (user_id_view) REFERENCES user(user_id),
+    PRIMARY KEY(product_id_view,user_id_view) )
++-----------------+------------------+------+-----+---------+-------+
+| Field           | Type             | Null | Key | Default | Extra |
++-----------------+------------------+------+-----+---------+-------+
+| user_id_view    | int(6) unsigned  | NO   | PRI | NULL    |       |
+| product_id_view | int(6) unsigned  | NO   | PRI | NULL    |       |
+| time_diff       | int(16) unsigned | NO   |     | NULL    |       |
+| last_access     | datetime         | YES  |     | NULL    |       |
++-----------------+------------------+------+-----+---------+-------+
