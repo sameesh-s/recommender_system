@@ -1,0 +1,13 @@
+1,electronics
+2,home Appliences
+3,Books
+4,Computers
+5,Computer Accesories
+6,Cameras,Audio & Video
+7,Mobile & Tablets
+8,Sports & Fitness
+9,Jwellery , Watches & eyewear
+10,Shoes
+11,Clothing
+12,Handbags & Luggage
+13,Beauty,Health & Gourmet

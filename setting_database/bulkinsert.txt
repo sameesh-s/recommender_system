@@ -1,0 +1,10 @@
+#Instructions for BULK insert in Mysql
+--------------------------------------
+mysql -h localhost -u root -p mcadb --local-infile
+
+LOAD DATA LOCAL INFILE '/home/category.txt'
+INTO TABLE mcadb.category
+FIELDS TERMINATED BY ','
+
+mysql> LOAD DATA LOCAL INFILE 'foo.csv' INTO TABLE bar FIELDS TERMINATED BY ',' ENCLOSED BY '#' LINES TERMINATED BY '\r' (a, b);
+Query OK, 365 rows affected, 0 warnings (0.10 sec)
