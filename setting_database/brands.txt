@@ -1,0 +1,416 @@
+1,A.F.C.A
+2,A.P.C.
+3,Acne Studios
+4,Acqua Limone
+5,Adika
+6,AKOO
+7,Alain Figaret
+8,AllSaints
+9,American Eagle Outfitters
+10,Anne Fontaine
+11,Antthony Mark Hankins
+12,Arckiv
+13,The Arrow Collar
+14,Arthur Galan AG
+15,Ascot Chang
+16,AussieBum
+17,Bench
+18,Bestseller 
+19,Beyond 
+20,Bigotti
+21,Bivolino
+22,Blaze of Sweden
+23,Bllack Noir
+24,Bloch 
+25,Bluenotes
+26,Bond
+27,Bonia 
+28,Bosideng
+29,Boxfresh
+30,BP Studio
+31,Callisti
+32,C&A
+33,Canterbury
+34,Caraceni
+35,Carbrini Sportswear
+36,Pierre Cardin
+37,Cassidi
+38,Castro
+39,Dean and Dan Caten
+40,Roberto Cavalli
+41,Céline
+42,Le Château
+43,China Heilan Group
+44,Christian Dior SE
+45,Circus Maximos
+46,Comptoir
+47,Corneliani
+48,Costume National
+49,Countess Mara
+50,Croc O' Shirt
+51,CuteCircuit
+52,Dale of Norway
+53,Damani Dada
+54,Denver Hayes
+55,Desigual
+56,Diesel 
+57,Disco 
+58,Dolfin Swimwear
+59,Ken Done
+60,Dorinha Jeans Wear
+61,Duchamp
+62,Duvelleroy
+63,Ede & Ravenscroft
+64,EDUN
+65,Embark
+66,English 
+67,Escada
+68,Esprit 
+69,Ethan James
+70,Extè
+71,Fabletics
+72,Fashion line
+73,Fenchurch
+74,Fendi
+75,Filippa K
+76,Fiorucci
+77,Firetrap
+78,Forever Lazy
+79,Fox
+80,French Connection
+81,G-Star Raw
+82,Gant
+83,Garage
+84,Garanimals
+85,Gas Jeans
+86,Gebrüder Stitch
+87,Genny
+88,Giordano
+89,Go International
+90,Grishko
+91,Groupe Zannier
+92,Gunhild
+93,Gunne Sax
+94,H&M
+95,Hacoupian
+96,Han
+97,Harari 
+98,Hatley 
+99,Haus Alkire
+100,Heilan Home
+101,Helmut Lang
+102,Hervé Leger
+103,Hield
+104,Anne T. Hill
+105,Honigman
+106,HTnaturals
+107,Indigo palms
+108,International
+109,Iron Heart
+110,ISKO 
+111,Izod Lacoste
+112,J-Wear
+113,Jako
+114,Jean Machine
+115,Jenny Hellström
+116,Joe Fresh
+117,Joseph
+118,Joykeep Jeans
+119,JustFab
+120,Karl Kani
+121,Karma 
+122,Kenzo 
+123,Khaadi
+124,Takeo Kikuchi
+125,André Kim
+126,Elaine Kim
+127,King Apparel
+128,Kiton
+129,Kookai
+130,Koton
+131,L'alpina
+132,La Bonneterie Cevenole
+133,La tennis Bensimon
+134,Lanidor
+135,Lanvin
+136,Larusmiani
+137,LC Waikiki
+138,Le Mont
+139,evi Strauss & Co.
+140,J.Lindeberg
+141,LittleBig
+142,Loro Piana
+143,Louis Philippe
+144,Loyandford
+145,Luigi Borrelli
+146,Lyle & Scott
+147,Madonna fashion brands
+148,Mallzee
+149,Mandarina Duck
+150,Mango
+151,Omar Mansoor
+152,Marc O'Polo
+153,Marimekko
+154,Marina Rinaldi
+155,Marithé
+156,Marni 
+157,La Martina
+158,Mavi Jeans
+159,Max Mara
+160,Max Studio
+161,MCS
+162,Merc 
+163,Mexx
+164,Miss Sixty
+165,Missoni
+166,Moods
+167,Morgan 
+168,Morphsuit
+169,Morphsuits
+170,Moschino
+171,Mudd Jeans
+172,Nakhjir
+173,Nakkna
+174,Noir
+175,Noko Jeans
+176,Norse
+177,Nudie
+178,OBEY
+179,OnePiece
+180,Ong Shunmugam
+181,Ooji
+182,Orca wetsuits
+183,Cesare Paciotti
+184,Pal Zileri
+185,Carlo Palazzi
+186,Paule Ka
+187,Penshoppe
+188,Pepe Jeans
+189,Police (brand)
+190,Polly Flinders
+191,Project D
+192,Real Gold
+193,Reflect-please
+194,Rêve En Vert
+195,Nina Ricci
+196,Rip Curl
+197,Rosasen
+198,S.E.H Kelly
+199,Haflinger
+200,Igor
+201,Grasshoppers
+202,Hunter Boots
+203,J Shoes
+204,J & M
+205,Jessica Simpson
+206,JD Fisk
+207,Jack Rogers
+208,Johnston & Murphy
+209,Jambu
+210,Kanna
+211,Jeffrey Campbell
+212,Keds
+213,Kork-Ease
+214,L'Amour Des Pieds
+215,Kepner Scott
+216,Keen
+217,Kid Express
+218,La Canadienne
+219,Lamo Sheepskin
+220,Lelli Kelly
+221,Livie & Luca
+222,Lucky
+223,Marc
+224,Mark Lemp Classics
+225,Me Too
+226,Mephisto
+227,Merrell
+228,Mia Kids
+229,Milano Boots
+230,Mini Melissa
+231,Michael Michael Kors
+232,Minnetonka
+233,Miz Mooz
+234,Morgan & Milo
+235,Munro
+236,Naot
+237,Naturino
+238,Native
+239,Naya
+240,Neil M
+241,Nicole
+242,Nina
+243,Oboz
+244,Olukai
+245,Pazitos
+246,Onitsuka Tiger
+247,Peter Kaiser Shoes
+248,Paul Mayer
+249,Pediped
+250,Rachel Shoes
+251,Rainbow Sandals
+252,Rebels
+253,Plae
+254,Pikolinos
+255,Poetic
+256,Reef
+257,Remonte Dorndorf
+258,Rieker
+259,Robeez
+260,Robert Zur
+261,Rollie
+262,Rockport
+263,Rose Petals
+264,Salewa
+265,Sacha London
+266,Salomon
+267,Salt Water
+268,Sam Edelman
+269,Samuel Hubbard
+270,Sandro Moscoloni
+271,Sanuk
+272,Saucony
+273,Sebago
+274,See Kai Run
+275,Sesto Meucci
+276,Seychelles
+277,Sivan
+278,Simple
+279,Smartwool
+280,Smoky Mountain Boots
+281,Softwalk
+282,Sorel
+283,Sperry Top-Sider
+284,Spring Step
+285,Steve Madden
+286,Steven by Steve Madden
+287,Stride Rite
+288,Stuart Weitzman
+289,Tamaris
+290,Taos Footwear
+291,Teva
+292,The FLEXX
+293,The North Face
+294,The Sak Footwear
+295,Thierry Rabotin
+296,Thor-lo
+297,Tigerbear Republik
+298,Timberland
+299,Toke
+300,Toe Warmers
+301,Toms
+302,Trotters
+303,Tsukihoshi
+304,UGG 
+305,Umi
+306,Under Armour
+307,Valdini
+308,Vaneli
+309,Vans
+310,Via Spiga
+311,Vionic
+312,Walking Cradles
+313,Western Chief
+314,Wolky	
+315,Acer
+316,Alcatel
+317,Allview
+318,Amazon
+319,Amoi
+320,Apple
+321,Archos
+322,Asus
+323,AT&T
+324,Benefon
+325,BenQ
+326,Bird
+327,BlackBerry
+328,BLU
+329,Bosch
+330,BQ
+331,Casio
+332,Cat
+333,Celkon
+334,Chea
+335,Coolpad
+336,Dell
+337,Emporia
+338,Energizer
+339,Ericsson
+340,Eten
+341,Fujitsu Siemens
+342,Garmin-Asus
+343,Gigabyt
+344,Gionee
+345,Google
+346,Haier
+347,HP
+348,HTC
+349,Huawei
+350,i-mate
+351,i-mobile
+352,Icemobile
+353,Innostream
+354,iNQ
+355,Intex
+356,Jolla
+357,Karbonn
+358,Kyocera
+359,Lava
+360,Lenovo
+361,LG
+362,Maxon
+363,Maxwest
+364,Meizu
+365,Micromax
+366,Microsoft
+367,Mitac
+368,Mitsubishi
+369,Modu
+370,Motorola
+371,MWg
+372,NEC
+373,Neonode
+374,NIU
+375,Nokia
+376,Nvidia
+377,O2
+378,OnePlus
+379,Oppo
+380,Orange
+381,Palm
+382,Panasonic
+383,Pantech
+384,Parla
+385,Philips
+386,Posh
+387,Prestigio
+388,QMobile
+389,Qtek
+390,Sagem
+391,Samsung
+392,Sendo
+393,Sewon
+394,Sharp
+395,Siemens
+396,Sonim
+397,Sony
+398,Sony Ericsson
+399,Spice
+400,T-Mobile
+401,Tel.Me.
+402,Telit
+403,Thuraya
+404,Toshiba
+405,Unnecto
+406,Vertu
+407,verykool
+408,vivo
+409,VK Mobile
+410,Vodafone
+411,Wiko
+412,WND
+413,XCute
+414,Xiaomi
+415,XOLO
+416,Yezz
