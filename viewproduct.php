@@ -5,5 +5,11 @@ include 'nav.html';
 include 'product.php';
 $param=$_GET['prodid'];
 $current=new Product($param);
-	$current->printBasic();
+	$current->generateScript();
+	$current->printWhole();
 ?>
+ <script>
+  window.addEventListener("beforeunload", function (e) { end();
+    (e || window.event).returnValue = null ;
+    return null;
+    </script>
