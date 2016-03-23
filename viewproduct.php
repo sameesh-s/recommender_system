@@ -8,8 +8,3 @@ $current=new Product($param);
 	$current->generateScript();
 	$current->printWhole();
 ?>
- <script>
-  window.addEventListener("beforeunload", function (e) { end();
-    (e || window.event).returnValue = null ;
-    return null;
-    </script>
