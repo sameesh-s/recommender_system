@@ -188,3 +188,26 @@ CREATE TABLE viewline
 | time_diff       | int(16) unsigned | NO   |     | NULL    |       |
 | last_access     | datetime         | YES  |     | NULL    |       |
 +-----------------+------------------+------+-----+---------+-------+
+
+
+11.brand
+----------
+CREATE TABLE brand 
+	(brand_id smallint(6) NOT NULL AUTO_INCREMENT,
+	name VARCHAR(35),
+	PRIMARY KEY(brand_id),
+	UNIQUE KEY(name) )
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| brand_id | smallint(6) | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(35) | YES  | UNI | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
+
+
+ALTERATION on tables
+-------------------------
+1.ALTER TABLE product ADD COLUMN `brand` SMALLINT(6) NOT NULL AFTER `category_id`;
+2.ALTER TABLE product ADD COLUMN `quantity` SMALLINT(6) AFTER `price`;
+3.ALTER TABLE product ADD COLUMN `rating` numeric(2,2) AFTER `quantity`;

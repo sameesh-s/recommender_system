@@ -10,7 +10,7 @@ session_start();
 		{
 		echo "<a href='Account.php'>";
 		echo $_SESSION['username'];
-		echo "&nbsp|&nbsp</a><a href='Wishlist.html'>Wishlist</a>&nbsp|&nbsp";
+		echo "&nbsp|&nbsp</a><a href='Wishlist.php'>Wishlist</a>&nbsp|&nbsp";
 		echo "<a href='Logout.php' style='text-decoration:none'><i class='glyphicon glyphicon-off'></i>Log out</a>";
 		}
 	session_write_close ();
