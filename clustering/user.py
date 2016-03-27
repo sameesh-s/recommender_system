@@ -4,10 +4,11 @@ import connect
 import sys
 
 number_clusters = 2
-number_of_iterations = 1
+number_of_iterations = 3
 user_length=0
 
 def distance(center , point):
+	print (center , point)
 	a = connect.listProducts( center )
 	b = connect.listProducts( point )
 	return len(set(a) & set(b))
@@ -27,15 +28,32 @@ if __name__ == '__main__':
 		if users [rand] not in clusters:
 			clusters.append( users [rand] )
 			i = i + 1
-	print clusters
 
-#iterate through all users to form cluster
+#iterate to form cluster
 	i=0
 	while i < number_of_iterations:
-		j=0
-		while j < number_clusters:
-			print distance( clusters [ j ] ,102548)
-			j = j + 1
+		#iterate through all users
+		user_no=0
+		while user_no < user_length:
+			point = users[ user_no]
+			j=0
+			max_similarity = -1
+			while j < number_clusters:
+				similar = distance( clusters [ j ] ,point)
+				if (similar > max_similarity):
+					max_similarity = similar
+					user_cluster = j
+					user_id = point
+				j = j + 1
+			connect.insertCluster( user_id, user_cluster, max_similarity )
+			user_no = user_no + 1
+		#compute new central points for clusters
+		if i+1 < number_of_iterations: 
+			temp = 0
+			while temp < number_clusters:	
+				clusters[ temp ]= connect.newMidPoint(temp)
+				temp = temp + 1
+			connect.deleteAll('cluster')
 		i = i + 1
 
 #close all connections

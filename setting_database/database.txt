@@ -204,6 +204,17 @@ CREATE TABLE brand
 | name     | varchar(35) | YES  | UNI | NULL    |                |
 +----------+-------------+------+-----+---------+----------------+
 
+12.cluster
+----------
+create table cluster ( user_id int(6), cluster int(6) , similarity numeric(8,2) )
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| user_id    | int(6)       | YES  |     | NULL    |       |
+| cluster    | int(6)       | YES  |     | NULL    |       |
+| similarity | decimal(8,2) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
 
 
 ALTERATION on tables
